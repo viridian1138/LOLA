@@ -38,7 +38,7 @@ class MyClass(ibodypart.IBodyPart):
     #
     # Name of the associated text file for persistence.
     #
-    __fname = 'calves.txt';
+    __fname = 'chest.txt';
     
     #
     # Constructor
@@ -55,10 +55,10 @@ class MyClass(ibodypart.IBodyPart):
     # Gets the name of the body part.
     #
     def name(self):
-        return 'Calves'
+        return 'Chest'
 
     def numDays(self):
-        return 1
+        return 4
     
     def getDate(self):
         return self.__myDate
@@ -83,7 +83,7 @@ __myEnt = MyClass();
 # OSGi activation class for a component.
 #
 def activate():
-    print( 'activate called -- calves' )
+    print( 'activate called -- chest' )
     context.add( __myEnt );
 
 
@@ -92,7 +92,7 @@ def activate():
 # OSGi activation class for a component.
 #
 def deactivate():
-    print( 'deactivate called -- calves' )
+    print( 'deactivate called -- chest' )
     context.remove( __myEnt );
 
 

@@ -35,8 +35,14 @@ import ibodypart;
 #
 class MyClass(ibodypart.IBodyPart):
     
+    #
+    # Name of the associated text file for persistence.
+    #
     __fname = 'abs.txt';
     
+    #
+    # Constructor
+    #
     def __init__(self):
         self.__myDate = datetime.date( 1970 , 1 , 1 );
         with open( self.__fname , 'r' ) as file:
@@ -45,6 +51,9 @@ class MyClass(ibodypart.IBodyPart):
             file.close();
 
 
+    #
+    # Gets the name of the body part.
+    #
     def name(self):
         return 'Abs'
 

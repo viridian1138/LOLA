@@ -38,8 +38,14 @@ import ibodypart;
 #
 class MyClass(ibodypart.IBodyPart):
     
+    #
+    # Name of the associated text file for persistence.
+    #
     __fname = 'hamstrings.txt';
     
+    #
+    # Constructor
+    #
     def __init__(self):
         self.__myDate = datetime.date( 1970 , 1 , 1 );
         with open( self.__fname , 'r' ) as file:
@@ -48,11 +54,14 @@ class MyClass(ibodypart.IBodyPart):
             file.close();
 
 
+    #
+    # Gets the name of the body part.
+    #
     def name(self):
         return 'Hamstrings'
 
     def numDays(self):
-        return 4
+        return 5
     
     def getDate(self):
         return self.__myDate

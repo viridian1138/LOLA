@@ -30,6 +30,9 @@ from abc import ABCMeta, abstractmethod
 class IBodyPart:
     __metaclass__ = ABCMeta
 
+    #
+    # Gets the name of the body part.
+    #
     @abstractmethod
     def name(self):
         raise NotImplementedError
