@@ -45,6 +45,9 @@ class IBodyPart:
     def getDate(self):
         raise NotImplementedError
 
+    #
+    # Sets the date when exercise last happened,
+    #
     @abstractmethod
     def setDate(self,date):
         raise NotImplementedError

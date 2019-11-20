@@ -66,6 +66,9 @@ class MyClass(ibodypart.IBodyPart):
     def getDate(self):
         return self.__myDate
     
+    #
+    # Sets the date when exercise last happened,
+    #
     def setDate(self,date):
         if not isinstance(date, datetime.date ): raise Exception('Bad interface');
         self.__myDate = date;

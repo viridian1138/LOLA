@@ -81,7 +81,8 @@ while int_value != 3:
         for x in context.get():
             if not isinstance(x, ibodypart.IBodyPart ): raise Exception('Bad interface');
             print( x.name() )
-            print( x.numDays() )
+            ddel = ( datetime.date.today() - x.getDate() ).days;
+            print( str( 100.0 * ddel / x.numDays() ) + "%" )
             if not isinstance(x.getDate(), datetime.date ): raise Exception('Bad interface');
             print( x.getDate() )
 
