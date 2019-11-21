@@ -60,6 +60,9 @@ class MyClass(ibodypart.IBodyPart):
     def numDays(self):
         return 4
     
+    #
+    # Gets the date when exercise last happened,
+    #
     def getDate(self):
         return self.__myDate
     

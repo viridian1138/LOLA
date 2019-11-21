@@ -41,6 +41,9 @@ class IBodyPart:
     def numDays(self):
         raise NotImplementedError
 
+    #
+    # Gets the date when exercise last happened,
+    #
     @abstractmethod
     def getDate(self):
         raise NotImplementedError

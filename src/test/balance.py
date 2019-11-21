@@ -18,11 +18,6 @@
 #$$endCprt
 
 
-#
-# Test component registering an instance of IBodyPart upon activation.
-#
-
-
 import datetime;
 
 
@@ -30,7 +25,9 @@ import context;
 import ibodypart;
 
 
-
+#
+# Test component registering an instance of IBodyPart upon activation.
+#
 
 
 #
@@ -41,7 +38,7 @@ class MyClass(ibodypart.IBodyPart):
     #
     # Name of the associated text file for persistence.
     #
-    __fname = 'hamstrings.txt';
+    __fname = 'balance.txt';
     
     #
     # Constructor
@@ -58,10 +55,10 @@ class MyClass(ibodypart.IBodyPart):
     # Gets the name of the body part.
     #
     def name(self):
-        return 'Hamstrings'
+        return 'Balance'
 
     def numDays(self):
-        return 5
+        return 1
     
     #
     # Gets the date when exercise last happened,
@@ -92,7 +89,7 @@ __myEnt = MyClass();
 # OSGi activation class for a component.
 #
 def activate():
-    print( 'activate called -- hamstrings' )
+    print( 'activate called -- balance' )
     context.add( __myEnt );
 
 
@@ -101,7 +98,7 @@ def activate():
 # OSGi activation class for a component.
 #
 def deactivate():
-    print( 'deactivate called -- hamstrings' )
+    print( 'deactivate called -- balance' )
     context.remove( __myEnt );
 
 
