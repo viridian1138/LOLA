@@ -57,6 +57,10 @@ class MyClass(ibodypart.IBodyPart):
     def name(self):
         return 'Upper Back'
 
+    #
+    # Estimate of number of days required for recovery.
+    # Adapted from estimate in Chapter 23 of Power by Hatfield (ISBN 0-8092-4433-0)
+    #
     def numDays(self):
         return 3
     

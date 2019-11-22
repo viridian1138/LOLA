@@ -27,6 +27,7 @@ import ibodypart;
 
 #
 # Test component registering an instance of IBodyPart upon activation.
+# Inclusion of balance in the test component set was somewhat inspired by the former PlayStation 3 title "Fit In Six"
 #
 
 
@@ -57,8 +58,12 @@ class MyClass(ibodypart.IBodyPart):
     def name(self):
         return 'Balance'
 
+    #
+    # Estimate of number of days required for recovery.
+    # Value returned is a guess.
+    #
     def numDays(self):
-        return 1
+        return 2
     
     #
     # Gets the date when exercise last happened,

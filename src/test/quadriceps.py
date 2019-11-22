@@ -18,6 +18,11 @@
 #$$endCprt
 
 
+#
+# Test component registering an instance of IBodyPart upon activation.
+#
+
+
 import datetime;
 
 
@@ -25,10 +30,7 @@ import context;
 import ibodypart;
 
 
-#
-# Test component registering an instance of IBodyPart upon activation.
-# Inclusion of flexibility in the test component set was somewhat inspired by the former PlayStation 3 title "Fit In Six"
-#
+
 
 
 #
@@ -39,7 +41,7 @@ class MyClass(ibodypart.IBodyPart):
     #
     # Name of the associated text file for persistence.
     #
-    __fname = 'flexibility.txt';
+    __fname = 'quadriceps.txt';
     
     #
     # Constructor
@@ -56,14 +58,14 @@ class MyClass(ibodypart.IBodyPart):
     # Gets the name of the body part.
     #
     def name(self):
-        return 'Flexibility'
+        return 'Quadriceps'
 
     #
     # Estimate of number of days required for recovery.
-    # Value returned is a guess.
+    # Adapted from estimate in Chapter 23 of Power by Hatfield (ISBN 0-8092-4433-0)
     #
     def numDays(self):
-        return 1
+        return 5
     
     #
     # Gets the date when exercise last happened,
@@ -94,7 +96,7 @@ __myEnt = MyClass();
 # OSGi activation class for a component.
 #
 def activate():
-    print( 'activate called -- flexibility' )
+    print( 'activate called -- quadriceps' )
     context.add( __myEnt );
 
 
@@ -103,7 +105,7 @@ def activate():
 # OSGi activation class for a component.
 #
 def deactivate():
-    print( 'deactivate called -- flexibility' )
+    print( 'deactivate called -- quadriceps' )
     context.remove( __myEnt );
 
 

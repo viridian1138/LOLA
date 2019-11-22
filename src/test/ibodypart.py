@@ -27,6 +27,9 @@ from abc import ABCMeta, abstractmethod
 
 
 
+#
+# Test interface defining functionality registered by test components.
+#
 class IBodyPart:
     __metaclass__ = ABCMeta
 
@@ -37,6 +40,9 @@ class IBodyPart:
     def name(self):
         raise NotImplementedError
 
+    #
+    # Estimate of number of days required for recovery.
+    #
     @abstractmethod
     def numDays(self):
         raise NotImplementedError

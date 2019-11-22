@@ -57,6 +57,10 @@ class MyClass(ibodypart.IBodyPart):
     def name(self):
         return 'Neck'
 
+    #
+    # Estimate of number of days required for recovery.
+    # Value returned is a guess.
+    #
     def numDays(self):
         return 2
     

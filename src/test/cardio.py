@@ -27,6 +27,7 @@ import ibodypart;
 
 #
 # Test component registering an instance of IBodyPart upon activation.
+# Inclusion of cardio in the test component set was somewhat inspired by the former PlayStation 3 title "Fit In Six"
 #
 
 
@@ -57,6 +58,10 @@ class MyClass(ibodypart.IBodyPart):
     def name(self):
         return 'Cardio'
 
+    #
+    # Estimate of number of days required for recovery.
+    # Value returned is a guess.
+    #
     def numDays(self):
         return 1
     
